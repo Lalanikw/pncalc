@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — PV Calc</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+      background: #0F0F0F;
+      color: #CCCCCC;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #1C1C1C;
+      border-bottom: 1px solid #303030;
+      padding: 28px 24px;
+      text-align: center;
+    }
+
+    .logo-title {
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      display: inline-block;
+    }
+    .logo-title span:nth-child(1) { color: #FF6B00; }
+    .logo-title span:nth-child(2) { color: #FF8C00; }
+    .logo-title span:nth-child(3) { color: #FFA500; }
+    .logo-title span:nth-child(4) { color: #FFC200; }
+    .logo-title span:nth-child(5) { color: #FFD700; }
+    .logo-title span:nth-child(6) { color: #E8F000; }
+    .logo-title span:nth-child(7) { color: #AADD00; }
+
+    header p {
+      margin-top: 6px;
+      font-size: 14px;
+      color: #888;
+    }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    .effective {
+      background: #1C1C1C;
+      border: 1px solid #303030;
+      border-radius: 10px;
+      padding: 14px 18px;
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 36px;
+    }
+
+    h2 {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: #FFB830;
+      margin-bottom: 10px;
+      margin-top: 40px;
+    }
+
+    h2:first-of-type { margin-top: 0; }
+
+    p {
+      font-size: 15px;
+      color: #CCCCCC;
+      margin-bottom: 14px;
+    }
+
+    .card {
+      background: #1C1C1C;
+      border: 1px solid #303030;
+      border-radius: 12px;
+      padding: 20px 22px;
+      margin-bottom: 14px;
+    }
+
+    .card p:last-child { margin-bottom: 0; }
+
+    .tag {
+      display: inline-block;
+      background: #4ADE8020;
+      color: #4ADE80;
+      border: 1px solid #4ADE8040;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 3px 10px;
+      margin-bottom: 10px;
+    }
+
+    .tag.yellow {
+      background: #FCD34D20;
+      color: #FCD34D;
+      border-color: #FCD34D40;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-bottom: 14px;
+    }
+
+    ul li {
+      font-size: 15px;
+      color: #CCCCCC;
+      margin-bottom: 6px;
+    }
+
+    a {
+      color: #FFB830;
+      text-decoration: none;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    .divider {
+      border: none;
+      border-top: 1px solid #303030;
+      margin: 36px 0;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: #555;
+      padding: 0 24px 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-title">
+      <span>P</span><span>V</span><span> </span><span>C</span><span>a</span><span>l</span><span>c</span>
+    </div>
+    <p>Solar Performance &amp; Payback Calculator</p>
+  </header>
+
+  <main>
+
+    <div class="effective">
+      <strong style="color:#FFFFFF;">Privacy Policy</strong> &nbsp;·&nbsp; Effective date: June 1, 2025 &nbsp;·&nbsp; Last updated: June 1, 2025
+    </div>
+
+    <h2>Overview</h2>
+    <p>
+      PV Calc is a solar performance and payback calculator for homeowners. We are committed to protecting your privacy. This policy describes what information the app uses, how it is used, and what we do not collect.
+    </p>
+
+    <h2>Information We Do Not Collect</h2>
+    <div class="card">
+      <span class="tag">No data collected</span>
+      <p>PV Calc does <strong style="color:#FFFFFF;">not</strong> collect, store, or transmit any personally identifiable information. Specifically:</p>
+      <ul>
+        <li>No account or registration is required</li>
+        <li>No name, email address, or contact information is collected</li>
+        <li>No financial or billing information is collected</li>
+        <li>No device identifiers, advertising IDs, or analytics are collected</li>
+        <li>No usage data or crash logs are sent to us</li>
+      </ul>
+    </div>
+
+    <h2>Location Information</h2>
+    <div class="card">
+      <span class="tag yellow">Used locally, not stored</span>
+      <p>
+        When you type a city or location into the app, that text is sent to <strong style="color:#FFFFFF;">OpenStreetMap Nominatim</strong> to look up geographic coordinates (latitude and longitude). Those coordinates are then sent to the <strong style="color:#FFFFFF;">PVGIS API</strong> (EU Joint Research Centre) to retrieve local solar irradiance data.
+      </p>
+      <p>
+        This information is used only to perform the solar calculation you requested. It is not stored on any server we operate, not linked to your identity, and not shared with any third party beyond the APIs listed below.
+      </p>
+      <p>
+        The app does <strong style="color:#FFFFFF;">not</strong> use your device's GPS or request location permissions. All location input is manual and text-based.
+      </p>
+    </div>
+
+    <h2>Third-Party Services</h2>
+    <p>PV Calc communicates with the following external services to perform solar calculations. These services have their own privacy policies.</p>
+
+    <div class="card">
+      <p><strong style="color:#FFFFFF;">PVGIS v5.2 — EU Joint Research Centre</strong></p>
+      <p>Provides satellite-derived solar irradiance data. Receives the latitude and longitude of the location you entered. No personal data is transmitted.</p>
+      <p><a href="https://joint-research-centre.ec.europa.eu/pvgis-online-tool_en" target="_blank">re.jrc.ec.europa.eu</a></p>
+    </div>
+
+    <div class="card">
+      <p><strong style="color:#FFFFFF;">OpenStreetMap Nominatim</strong></p>
+      <p>Provides free geocoding (converts a place name to coordinates). Receives the city or location name you type. No personal data is transmitted.</p>
+      <p><a href="https://nominatim.openstreetmap.org/ui/about.html" target="_blank">nominatim.openstreetmap.org</a></p>
+    </div>
+
+    <h2>Data Storage</h2>
+    <p>
+      All inputs you enter (home profile, system preferences, cost figures) are stored only on your device using standard local app storage. This data never leaves your device except as part of the API requests described above. Uninstalling the app removes all locally stored data.
+    </p>
+
+    <h2>Children's Privacy</h2>
+    <p>
+      PV Calc is not directed at children under the age of 13. We do not knowingly collect any information from children. If you believe a child has provided information through this app, please contact us and we will address it promptly.
+    </p>
+
+    <h2>Advertising</h2>
+    <p>
+      PV Calc contains no advertising and no advertising SDKs. We do not use your data for targeted advertising.
+    </p>
+
+    <h2>Changes to This Policy</h2>
+    <p>
+      If we make material changes to this privacy policy, we will update the effective date above and release an updated version of the app. Continued use of the app after changes constitutes acceptance of the revised policy.
+    </p>
+
+    <hr class="divider" />
+
+    <h2>Contact</h2>
+    <p>
+      If you have questions or concerns about this privacy policy, please contact us at:<br />
+      <a href="mailto:lalanikw@gmail.com">lalanikw@gmail.com</a>
+    </p>
+
+  </main>
+
+  <footer>
+    &copy; 2025 PV Calc &nbsp;·&nbsp; Built with React Native &amp; Expo &nbsp;·&nbsp; Solar data © EU JRC PVGIS
+  </footer>
+
+</body>
+</html>

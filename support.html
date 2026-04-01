@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — PV Calc</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+      background: #0F0F0F;
+      color: #CCCCCC;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #1C1C1C;
+      border-bottom: 1px solid #303030;
+      padding: 28px 24px;
+      text-align: center;
+    }
+
+    .logo-title {
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      display: inline-block;
+    }
+    .logo-title span:nth-child(1) { color: #FF6B00; }
+    .logo-title span:nth-child(2) { color: #FF8C00; }
+    .logo-title span:nth-child(3) { color: #FFA500; }
+    .logo-title span:nth-child(4) { color: #FFC200; }
+    .logo-title span:nth-child(5) { color: #FFD700; }
+    .logo-title span:nth-child(6) { color: #E8F000; }
+    .logo-title span:nth-child(7) { color: #AADD00; }
+
+    header p {
+      margin-top: 6px;
+      font-size: 14px;
+      color: #888;
+    }
+
+    nav {
+      background: #1C1C1C;
+      border-bottom: 1px solid #222;
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 24px;
+    }
+
+    nav a {
+      font-size: 13px;
+      color: #888;
+      text-decoration: none;
+      padding: 6px 14px;
+      border-radius: 20px;
+      transition: background 0.15s;
+    }
+
+    nav a:hover { background: #2A2A2A; color: #FFF; }
+    nav a.active { background: #FFB83020; color: #FFB830; }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    h1 {
+      font-size: 26px;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 8px;
+    }
+
+    .intro {
+      font-size: 15px;
+      color: #888;
+      margin-bottom: 36px;
+    }
+
+    h2 {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: #FFB830;
+      margin-bottom: 12px;
+      margin-top: 40px;
+    }
+
+    h2:first-of-type { margin-top: 0; }
+
+    p {
+      font-size: 15px;
+      color: #CCCCCC;
+      margin-bottom: 14px;
+    }
+
+    .card {
+      background: #1C1C1C;
+      border: 1px solid #303030;
+      border-radius: 12px;
+      padding: 20px 22px;
+      margin-bottom: 12px;
+    }
+
+    .card p:last-child { margin-bottom: 0; }
+
+    .card-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 8px;
+    }
+
+    .faq-q {
+      font-size: 15px;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 6px;
+    }
+
+    .faq-a {
+      font-size: 15px;
+      color: #CCCCCC;
+      margin-bottom: 0;
+    }
+
+    .contact-box {
+      background: linear-gradient(135deg, #FF6B0015, #AADD0015);
+      border: 1px solid #FFB83040;
+      border-radius: 14px;
+      padding: 28px 24px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .contact-box h3 {
+      font-size: 18px;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 8px;
+    }
+
+    .contact-box p {
+      color: #888;
+      margin-bottom: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #FF6B00, #AADD00);
+      color: #0F0F0F;
+      font-size: 15px;
+      font-weight: 800;
+      padding: 12px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      letter-spacing: 0.3px;
+    }
+
+    .btn:hover { opacity: 0.9; text-decoration: none; }
+
+    a { color: #FFB830; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .divider {
+      border: none;
+      border-top: 1px solid #303030;
+      margin: 36px 0;
+    }
+
+    .tab-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    @media (max-width: 480px) {
+      .tab-grid { grid-template-columns: 1fr; }
+    }
+
+    .tab-card {
+      background: #1C1C1C;
+      border: 1px solid #303030;
+      border-radius: 12px;
+      padding: 16px 18px;
+    }
+
+    .tab-name {
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: #FFB830;
+      margin-bottom: 4px;
+    }
+
+    .tab-desc {
+      font-size: 14px;
+      color: #999;
+      margin-bottom: 0;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: #555;
+      padding: 0 24px 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-title">
+      <span>P</span><span>V</span><span> </span><span>C</span><span>a</span><span>l</span><span>c</span>
+    </div>
+    <p>Solar Performance &amp; Payback Calculator</p>
+  </header>
+
+  <nav>
+    <a href="#" class="active">Support</a>
+    <a href="privacy-policy.html">Privacy Policy</a>
+  </nav>
+
+  <main>
+
+    <h1>Support</h1>
+    <p class="intro">Need help with PV Calc? Find answers below or reach out directly — we're happy to help.</p>
+
+    <!-- How the app works -->
+    <h2>How the App Works</h2>
+    <p>
+      PV Calc has four tabs. Here's what each one does:
+    </p>
+    <div class="tab-grid">
+      <div class="tab-card">
+        <div class="tab-name">Calculator</div>
+        <p class="tab-desc">Enter your location and home profile. The app fetches live solar data and estimates your usage.</p>
+      </div>
+      <div class="tab-card">
+        <div class="tab-name">Solar</div>
+        <p class="tab-desc">Choose how much of your bill you want solar to cover and pick your panel type. See system sizing results and monthly output.</p>
+      </div>
+      <div class="tab-card">
+        <div class="tab-name">Costs</div>
+        <p class="tab-desc">Adjust install cost and utility rate. See incentive breakdowns (federal ITC, Hawaii state credit) and financing scenarios.</p>
+      </div>
+      <div class="tab-card">
+        <div class="tab-name">About</div>
+        <p class="tab-desc">Learn about data sources, incentive details, and how to verify current tax credit rates.</p>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="card">
+      <p class="faq-q">Why do I need to enter a location?</p>
+      <p class="faq-a">Solar production depends heavily on where you live — how many peak sun hours your area gets per day. PV Calc uses your location to fetch real satellite solar data from the EU JRC PVGIS database, giving you an accurate estimate instead of a generic average.</p>
+    </div>
+
+    <div class="card">
+      <p class="faq-q">How accurate are the estimates?</p>
+      <p class="faq-a">The solar production estimates are based on real satellite irradiance data (PVGIS v5.2) which is the same data used by professional solar installers and researchers worldwide. The financial estimates use your inputs directly. For a final quote, always get bids from at least two or three local installers.</p>
+    </div>
+
+    <div class="card">
+      <p class="faq-q">The app shows "offline estimate" — what does that mean?</p>
+      <p class="faq-a">If the PVGIS API is temporarily unavailable or you have no internet connection, the app falls back to calibrated offline estimates based on historical Hawaii/NSRDB solar data. These are still reasonable estimates but are less precise than live data. Try again with a connection for the most accurate results.</p>
+    </div>
+
+    <div class="card">
+      <p class="faq-q">Are the tax credit percentages up to date?</p>
+      <p class="faq-a">The federal Investment Tax Credit (30%) and Hawaii state tax credit (35%, capped at $5,000) are current as of January 2025. Tax laws can change — always verify current rates using the links in the Costs tab, and consult a tax professional before filing. The app shows the date rates were last verified.</p>
+    </div>
+
+    <div class="card">
+      <p class="faq-q">Does the app work outside of Hawaii?</p>
+      <p class="faq-a">Yes. You can enter any location worldwide that PVGIS covers (most of the Americas, Europe, Africa, and Asia). The solar production estimates will be accurate for your location. Note that the Hawaii state tax credit only applies to Hawaii residents — users in other states should check their local incentives at <a href="https://www.dsireusa.org" target="_blank">dsireusa.org</a>.</p>
+    </div>
+
+    <div class="card">
+      <p class="faq-q">Does the app use my GPS or store my location?</p>
+      <p class="faq-a">No. The app does not request location permissions and does not use GPS. You type a city or location manually. That text is sent to OpenStreetMap to find coordinates, which are then sent to PVGIS to retrieve solar data. Nothing is stored on any server. See our <a href="privacy-policy.html">Privacy Policy</a> for full details.</p>
+    </div>
+
+    <div class="card">
+      <p class="faq-q">Can I use this to make a final purchase decision?</p>
+      <p class="faq-a">PV Calc gives you a solid, data-driven starting point — the same solar resource data professionals use. Use it to compare system sizes, understand payback timelines, and decide whether solar makes sense for your home. Before signing a contract, get multiple quotes from licensed local installers and consult a tax professional about your specific credit eligibility.</p>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- Contact -->
+    <div class="contact-box">
+      <h3>Still need help?</h3>
+      <p>Send us an email and we'll get back to you as soon as possible.</p>
+      <a class="btn" href="mailto:lalanikw@gmail.com">Email Support</a>
+    </div>
+
+  </main>
+
+  <footer>
+    &copy; 2025 PV Calc &nbsp;·&nbsp; Built with React Native &amp; Expo &nbsp;·&nbsp; Solar data © EU JRC PVGIS
+  </footer>
+
+</body>
+</html>
